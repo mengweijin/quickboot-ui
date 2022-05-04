@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Layout from '../components/layout/Layout.vue'
-import Header from '../components/Header.vue'
+import Layout from '../layout/Layout.vue'
 
 const routes = [
     { 
@@ -11,36 +10,7 @@ const routes = [
             {
                 path: '/goods',
                 components: {
-                    Header: Header,
-                    default: () => import ('../components/layout/LayoutGoods.vue')
-                }
-            },
-            {
-                path: '/goods/:goodsTypeId',
-                components: {
-                    Header: Header,
-                    default: () => import ('../components/layout/LayoutGoods.vue')
-                }
-            },
-            {
-                path: '/goodsType',
-                components: {
-                    Header: Header,
-                    default: () => import ('../components/layout/LayoutGoodsType.vue')
-                }
-            },
-            {
-                path: '/stock-in',
-                components: {
-                 Header: Header,
-                 default: () => import ('../components/StockIn.vue')
-                }
-            },
-            {
-                path: '/stock-out',
-                components: {
-                 Header: Header,
-                 default: () => import ('../components/StockOut.vue')
+                    //default: () => import ('../components/layout/LayoutGoods.vue')
                 }
             }
         ]
