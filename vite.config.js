@@ -1,10 +1,23 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+// 自动按需导入 Element-Plus 组件：https://element-plus.org/zh-CN/guide/quickstart.html#%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5
+// 就不用在 main.js 或者 .vue 组件中手动导入了。
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-      plugins: [vue()], // 配置需要使用的插件列表，这里将vue添加进去
+      plugins: [
+          vue(), // 配置需要使用的插件列表，这里将vue添加进去
+          AutoImport({
+            resolvers: [ElementPlusResolver()], 
+          }),
+          Components({
+            resolvers: [ElementPlusResolver()], 
+          }),
+      ], 
       // 配置文件别名
       // https://cn.vitejs.dev/config/#resolve-alias
       // 这里是将src目录配置别名为 @ 方便在项目中导入src目录下的文件
