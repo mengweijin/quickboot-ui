@@ -20,6 +20,7 @@
     color: #333;
     text-align: center;
     line-height: 60px;
+    height: 60px;
 }
 .el-menu, .el-menu-item, .el-sub-menu__title {
     background-color: var(--el-menu-bg-color) !important;
@@ -27,31 +28,37 @@
 .el-aside {
     background-color: #D3DCE6;
     color: #333;
+    /* 设置左侧 aside 高度。vh就是当前屏幕可见高度的1%。因此，100vh就等于当前浏览器的视窗高度，即浏览器内部的可视区域的高度大小。 */
+    height: calc(100vh - 60px - 60px);
 }
 .el-main {
     background-color: #E9EEF3;
     color: #333;
+    padding: 0;
+    /* 设置主体 main 高度（减去 header 和 footer 的高度） */
+    height: calc(100vh - 60px - 60px);
 }
 .el-footer {
     background-color: white;
     color: #333;
     text-align: center;
     line-height: 60px;
+    height: 60px;
 }
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
-#app,.box{
+/* #app,.box{
     height: 100%;
 }
-  .el-container {
+.el-container {
     height: 100%;
 }
 body > .el-container {
-    margin-bottom: 40px;
-}
+    margin-bottom: 60px;
+} */
 
 /* svg 字体图标默认位置偏上，无法与文字对齐，这里设置一下 */
 svg {

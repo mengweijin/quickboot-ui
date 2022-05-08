@@ -6,20 +6,18 @@ import Footer from './Footer.vue'
 <template>
   <el-container>
       <el-header> <Header/> </el-header>
-
-       <!-- <router-view/> -->
         <el-container>
             <el-aside width="210px">
                 <!-- <GoodsTypeTree/> -->
+                
             </el-aside>
             <el-main>
                     <!-- <Goods/> -->
+                    
             </el-main>
         </el-container>
 
-      <el-footer>
-         <Footer/> 
-      </el-footer>
+      <el-footer> <Footer/> </el-footer>
     </el-container>
 </template>
 
