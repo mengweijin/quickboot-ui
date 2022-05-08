@@ -1,10 +1,13 @@
 <template>
   <el-aside :width="isCollapse ? '64px' : '200px'">
-    <div class="toggle-button" @click="toggleCollapse">|||</div>
-    <el-menu router mode="vertical" :collapse="isCollapse">
+    <div class="toggle-button" @click="toggleCollapse">
+      <el-icon :size="20" style="vertical-align: middle" v-show="isCollapse"><expand /></el-icon>
+      <el-icon :size="20" style="vertical-align: middle" v-show="!isCollapse"><fold /></el-icon>
+    </div>
+    <el-menu router mode="vertical" :collapse="isCollapse" :collapse-transition="false">
       <el-sub-menu index="1">
         <template #title>
-          <el-icon><location /></el-icon>
+          <el-icon style="vertical-align: middle"><location /></el-icon>
           <span>Navigator One</span>
         </template>
         <el-menu-item-group>

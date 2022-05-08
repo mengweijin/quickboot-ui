@@ -60,9 +60,4 @@ body > .el-container {
     margin-bottom: 60px;
 } */
 
-/* svg 字体图标默认位置偏上，无法与文字对齐，这里设置一下 */
-svg {
-    position: relative; 
-    top: 4px;
-}
 </style>
