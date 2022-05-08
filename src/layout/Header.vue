@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-menu router mode="horizontal" background-color="#b3c0d1">
+    <el-menu router mode="horizontal">
       <el-menu-item><img src="/logo.png" style="height: var(--el-menu-item-height);"></el-menu-item>
       <el-menu-item v-bind:index="'/goodsType'" style="color: #303133;">商品类型管理</el-menu-item>
       <el-menu-item v-bind:index="'/'" style="color: #303133;">库存管理</el-menu-item>

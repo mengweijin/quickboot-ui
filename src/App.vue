@@ -23,7 +23,7 @@
     height: 60px;
 }
 .el-menu, .el-menu-item, .el-sub-menu__title {
-    background-color: var(--el-menu-bg-color) !important;
+    background-color: var(--el-menu-bg-color);
 }
 .el-aside {
     background-color: #D3DCE6;
