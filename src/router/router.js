@@ -15,7 +15,7 @@ const routes = [
             }
         ]
     }
-  ]
+]
 
 // 路由根路径：'/relx/'; 为什么设置路由根路径？避免路由路径和后台接口路径一样，当刷新页面时变成调用后台接口而返回 JSON 的问题。
 // 部署到 nginx 服务器下，我们一般 router 的 hitory 使用 createWebHistory 来去掉 url 中的 #
