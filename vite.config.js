@@ -8,7 +8,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 // 就不用在 main.js 或者 .vue 组件中手动导入了。
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { NaiveUiResolver, ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -38,7 +38,9 @@ export default defineConfig({
                 }),
                 // Auto register Element Plus components
                 // 自动导入 Element Plus 组件
-                ElementPlusResolver()
+                ElementPlusResolver(),
+                // 自动导入 NaiveUi 组件
+                NaiveUiResolver()
             ], 
           }),
           Icons({

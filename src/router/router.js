@@ -4,11 +4,12 @@ import Layout from '../layout/Layout.vue'
 const routes = [
     { 
         path: '/', 
+        name: 'home',
         component: Layout,
-        redirect: '/goods',
+        redirect: '/home',
         children: [
             {
-                path: '/goods',
+                path: '/home',
                 components: {
                     //default: () => import ('../components/layout/LayoutGoods.vue')
                 }
@@ -23,7 +24,7 @@ const routes = [
 // 但我们又想使用 createWebHistory 模式，还不想刷新时出现页面 404 的问题，此时需要在后端处理了。
 // 参考 java 类：NotFoundErrorPageRegistrar.java
 const router = createRouter({
-    history: createWebHistory('/relx/'),
+    history: createWebHistory('/quickboot/'),
     routes, 
 })
 

@@ -1,20 +1,25 @@
 <script setup>
 import Header from './Header.vue'
 import Footer from './Footer.vue'
-import ElASide from './ElASide.vue'
+import ASide from './ASide.vue'
 </script>
 
 <template>
-  <el-container>
-      <el-header> <Header/> </el-header>
-        <el-container>
-          <ElASide/>
-          <el-main>
-            <!-- <Goods/> --> 
-          </el-main>
-        </el-container>
-      <el-footer> <Footer/> </el-footer>
-    </el-container>
+  <n-space vertical size="large">
+    <n-layout>
+      <n-layout-header><Header/></n-layout-header>
+      <n-layout has-sider>
+        <n-layout-sider>
+          <ASide/>
+        </n-layout-sider>
+        <n-layout-content>
+          
+        </n-layout-content>
+      </n-layout>
+      <n-layout-footer><Footer/></n-layout-footer>
+    </n-layout>
+  </n-space>
+
 </template>
 
 <script>
@@ -25,5 +30,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.n-layout-sider .n-layout-sider-scroll-container {
+  height: calc(100vh - 60px - 32px);
+}
 </style>

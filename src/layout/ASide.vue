@@ -1,23 +1,44 @@
 <template>
-  <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
+  <n-menu :options="menuOptions"/>
 </template>
 
 <script setup>
-import { defineComponent, h, ref } from "vue";
-import { NIcon } from "naive-ui";
+import { defineComponent, h } from "vue";
+import { NIcon, useMessage } from "naive-ui";
+import { RouterLink } from "vue-router";
 import {
   BookOutline as BookIcon,
   PersonOutline as PersonIcon,
-  WineOutline as WineIcon
+  WineOutline as WineIcon,
+  HomeOutline as HomeIcon
 } from "@vicons/ionicons5";
 
 function renderIcon(icon) {
   return () => h(NIcon, null, { default: () => h(icon) });
 }
 
-let activeKey = ref(null)
-
 const menuOptions = [
+  {
+    label: () => h(RouterLink, {
+      to: {
+        name: "home",
+        params: {
+          lang: "zh-CN"
+        }
+      }
+    }, { default: () => "回家" }),
+    key: "go-back-home",
+    icon: renderIcon(HomeIcon)
+  },
+  {
+    key: "divider-1",
+    type: "divider",
+    props: {
+      style: {
+        marginLeft: "32px"
+      }
+    }
+  },
   {
     label: () => h("a", {
       href: "https://baike.baidu.com/item/%E4%B8%94%E5%90%AC%E9%A3%8E%E5%90%9F",
@@ -26,6 +47,18 @@ const menuOptions = [
     }, "且听风吟"),
     key: "hear-the-wind-sing",
     icon: renderIcon(BookIcon)
+  },
+  {
+    label: "1973年的弹珠玩具",
+    key: "pinball-1973",
+    icon: renderIcon(BookIcon),
+    disabled: true,
+    children: [
+      {
+        label: "鼠",
+        key: "rat"
+      }
+    ]
   },
   {
     label: "寻羊冒险记",
@@ -66,6 +99,20 @@ const menuOptions = [
           }
         ]
       },
+      {
+        label: "食物",
+        key: "food",
+        children: [
+          {
+            label: "三明治",
+            key: "sandwich"
+          }
+        ]
+      },
+      {
+        label: "过去增多，未来减少",
+        key: "the-past-increases-the-future-recedes"
+      }
     ]
   }
 ];
@@ -73,16 +120,16 @@ const menuOptions = [
 
 <script>
 export default {
-  name: 'Header'
+  name: 'ASide',
+  methods: {
+    toggleCollapse() {
+      
+    }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-img{
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
+
 </style>
