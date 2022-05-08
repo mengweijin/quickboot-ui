@@ -4,28 +4,26 @@
       <el-icon :size="20" style="vertical-align: middle" v-show="isCollapse"><expand /></el-icon>
       <el-icon :size="20" style="vertical-align: middle" v-show="!isCollapse"><fold /></el-icon>
     </div>
-    <el-menu router mode="vertical" :collapse="isCollapse" :collapse-transition="false">
+    <el-menu router mode="vertical" :collapse="isCollapse" :collapse-transition="false" unique-opened>
       <el-sub-menu index="1">
-        <template #title>
-          <el-icon style="vertical-align: middle"><location /></el-icon>
-          <span>Navigator One</span>
-        </template>
-        <el-menu-item-group>
-          <template #title><span>Group One</span></template>
-          <el-menu-item index="1-1">item one</el-menu-item>
-          <el-menu-item index="1-2">item two</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group Two">
-          <el-menu-item index="1-3">item three</el-menu-item>
-        </el-menu-item-group>
+        <template #title><el-icon><document /></el-icon> <span>Workspace</span></template>
+        <el-menu-item index="1-1"><el-icon><document /></el-icon>item one</el-menu-item>
+        <el-menu-item index="1-2"><el-icon><document /></el-icon>item two</el-menu-item>
         <el-sub-menu index="1-4">
-          <template #title><span>item four</span></template>
-          <el-menu-item index="1-4-1">item one</el-menu-item>
+          <template #title><el-icon><document /></el-icon>item four</template>
+          <el-menu-item index="1-4-1"><el-icon><document /></el-icon>item one</el-menu-item>
+          <el-menu-item index="1-4-2"><el-icon><document /></el-icon>item two</el-menu-item>
+          <el-menu-item index="1-4-3"><el-icon><document /></el-icon>item three</el-menu-item>
         </el-sub-menu>
       </el-sub-menu>
-
+      <el-sub-menu index="5">
+        <template #title><el-icon><document /></el-icon> <span>Workspace2</span></template>
+        <el-menu-item index="5-1"><el-icon><document /></el-icon>item one</el-menu-item>
+        <el-menu-item index="5-2"><el-icon><document /></el-icon>item two</el-menu-item>
+        <el-menu-item index="5-3"><el-icon><document /></el-icon>item three</el-menu-item>
+      </el-sub-menu>
       <el-menu-item index="2">
-        <el-icon><icon-menu /></el-icon>
+        <el-icon><document /></el-icon>
         <template #title>Navigator Two</template>
       </el-menu-item>
       <el-menu-item index="3" disabled>
@@ -76,7 +74,26 @@ export default {
   /* 设置鼠标悬浮变小手效果 */
   cursor:pointer;
 }
-.el-menu-vertical:not(.el-menu--collapse) {
-  background-color: #b3c0d1;
+
+
+.el-menu {
+  --el-menu-text-color: #D2D2D2;
+  --el-menu-bg-color: #4A5064;
+  --el-menu-hover-text-color: #5FB878;
+  --el-menu-hover-bg-color: #4A5064;
+  --el-menu-active-color: #1E9FFF;
 }
+.el-menu-item {
+  color: #D2D2D2;
+  background-color: #4A5064;
+}
+.el-menu-item-group {
+  background-color: #4A5064;
+}
+.el-sub-menu {
+  background-color: #4A5064;
+  --el-menu-text-color: #D2D2D2;
+  --el-menu-bg-color: #4A5064;
+  --el-menu-hover-bg-color: #4A5064;
+} 
 </style>
