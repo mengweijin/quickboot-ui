@@ -1,16 +1,26 @@
 <template>
   <div>
-    <el-menu router mode="horizontal">
-      <el-menu-item><img src="/logo.png" style="height: var(--el-menu-item-height);"></el-menu-item>
-      <el-menu-item v-bind:index="'/goodsType'">商品类型管理</el-menu-item>
-      <el-menu-item v-bind:index="'/'">库存管理</el-menu-item>
-      <el-menu-item v-bind:index="'/stock-in'">入库管理</el-menu-item>
-      <el-menu-item v-bind:index="'/stock-out'">出库管理</el-menu-item>
-      <el-menu-item v-bind:index="''" disabled>月利润分析</el-menu-item>
-      <el-menu-item v-bind:index="''" disabled>兑换记录</el-menu-item>
-      <el-menu-item v-bind:index="''" disabled>售后记录</el-menu-item>
-      <el-menu-item v-bind:index="''" disabled>会员管理</el-menu-item>
-    </el-menu>
+      <el-row>
+        <el-col :span="18">
+          <el-menu router mode="horizontal">
+            <el-menu-item v-bind:index="'/'"><img src="/logo.png" style="height: var(--el-menu-item-height);"></el-menu-item>
+            <el-menu-item v-bind:index="'/goods'">商品管理</el-menu-item>
+            <el-menu-item v-bind:index="'/customer'" disabled>会员管理</el-menu-item>
+          </el-menu>
+        </el-col>
+        <el-col :span="6">
+            <el-menu router mode="horizontal" style="justify-content:flex-end; ">
+              <el-menu-item v-bind:index="'1231231'"><el-icon><avatar /></el-icon>Admin</el-menu-item>
+              <el-sub-menu v-bind:index="''">
+                <template #title><el-icon><setting /></el-icon><span>设置</span></template>
+                <!-- <el-menu-item v-bind:index="''"><el-icon><document /></el-icon>item one</el-menu-item>
+                <el-menu-item v-bind:index="''"><el-icon><document /></el-icon>item two</el-menu-item>
+                <el-menu-item v-bind:index="''"><el-icon><document /></el-icon>item three</el-menu-item> -->
+              </el-sub-menu>
+            </el-menu>
+        </el-col>
+      </el-row>
+    
   </div>
 </template>
 

@@ -6,33 +6,17 @@
     </div>
     <el-menu router mode="vertical" :collapse="isCollapse" :collapse-transition="false" unique-opened>
       <el-sub-menu index="1">
-        <template #title><el-icon><document /></el-icon> <span>Workspace</span></template>
+        <template #title><el-icon><document /></el-icon> <span>menu one</span></template>
         <el-menu-item index="1-1"><el-icon><document /></el-icon>item one</el-menu-item>
         <el-menu-item index="1-2"><el-icon><document /></el-icon>item two</el-menu-item>
-        <el-sub-menu index="1-4">
-          <template #title><el-icon><document /></el-icon>item four</template>
-          <el-menu-item index="1-4-1"><el-icon><document /></el-icon>item one</el-menu-item>
-          <el-menu-item index="1-4-2"><el-icon><document /></el-icon>item two</el-menu-item>
-          <el-menu-item index="1-4-3"><el-icon><document /></el-icon>item three</el-menu-item>
-        </el-sub-menu>
       </el-sub-menu>
-      <el-sub-menu index="5">
-        <template #title><el-icon><document /></el-icon> <span>Workspace2</span></template>
-        <el-menu-item index="5-1"><el-icon><document /></el-icon>item one</el-menu-item>
-        <el-menu-item index="5-2"><el-icon><document /></el-icon>item two</el-menu-item>
-        <el-menu-item index="5-3"><el-icon><document /></el-icon>item three</el-menu-item>
-      </el-sub-menu>
-      <el-menu-item index="2">
+      <el-menu-item index="2" disabled>
         <el-icon><document /></el-icon>
-        <template #title>Navigator Two</template>
+        <template #title>menu two</template>
       </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <el-icon><document /></el-icon>
-        <template #title>Navigator Three</template>
-      </el-menu-item>
-      <el-menu-item index="4">
+      <el-menu-item index="3">
         <el-icon><setting /></el-icon>
-        <template #title>Navigator Four</template>
+        <template #title>menu three</template>
       </el-menu-item>
     </el-menu>
   </el-aside>
