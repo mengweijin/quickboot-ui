@@ -1,25 +1,20 @@
 <script setup>
 import Header from './Header.vue'
 import Footer from './Footer.vue'
-import ASide from './ASide.vue'
+import ElASide from './ElASide.vue'
 </script>
 
 <template>
-  <n-space vertical size="large">
-    <n-layout>
-      <n-layout-header><Header/></n-layout-header>
-      <n-layout has-sider>
-        <n-layout-sider>
-          <ASide/>
-        </n-layout-sider>
-        <n-layout-content>
-          
-        </n-layout-content>
-      </n-layout>
-      <n-layout-footer><Footer/></n-layout-footer>
-    </n-layout>
-  </n-space>
-
+  <el-container>
+      <el-header> <Header/> </el-header>
+        <el-container>
+          <ElASide/>
+          <el-main>
+            <!-- <Goods/> --> 
+          </el-main>
+        </el-container>
+      <el-footer> <Footer/> </el-footer>
+    </el-container>
 </template>
 
 <script>
@@ -30,7 +25,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.n-layout-header {
-  line-height: 0px;
-}
+
 </style>
