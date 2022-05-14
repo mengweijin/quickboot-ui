@@ -19,6 +19,19 @@ let activeKey = ref(null)
 
 const menuOptions = [
   {
+    label: () => h("img", {
+      src: "/logo.png",
+      style: "width: auto; height: auto; max-width: 100%; max-height: 42px; margin-top: 10px;"
+    }),
+    key: "logo"
+  },
+  {
+    label: "哈哈哈",
+    key: "hahaha",
+    icon: renderIcon(BookIcon),
+    disabled: false
+  },
+  {
     label: () => h("a", {
       href: "https://baike.baidu.com/item/%E4%B8%94%E5%90%AC%E9%A3%8E%E5%90%9F",
       target: "_blank",
@@ -79,6 +92,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.n-menu {
+  width: 100%;
+  /* --n-item-height: 60px !important; */
+  --n-item-icon-color: white !important;
+  --n-item-icon-color-active: #5FB878 !important;
+  --n-item-text-color: white !important;
+  --n-item-text-color-active: #5FB878 !important;
+  background-color: #393D49;
+}
+
 img{
     width: auto;
     height: auto;

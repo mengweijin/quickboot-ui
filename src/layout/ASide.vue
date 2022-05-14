@@ -30,15 +30,15 @@ const menuOptions = [
     key: "go-back-home",
     icon: renderIcon(HomeIcon)
   },
-  {
-    key: "divider-1",
-    type: "divider",
-    props: {
-      style: {
-        marginLeft: "32px"
-      }
-    }
-  },
+  // {
+  //   key: "divider-1",
+  //   type: "divider",
+  //   props: {
+  //     style: {
+  //       marginLeft: "32px"
+  //     }
+  //   }
+  // },
   {
     label: () => h("a", {
       href: "https://baike.baidu.com/item/%E4%B8%94%E5%90%AC%E9%A3%8E%E5%90%9F",
@@ -131,5 +131,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.n-menu {
+  height: calc(100vh - 42px - 26px);
+  --n-item-icon-color: white !important;
+  --n-item-text-color: white !important;
+  --n-arrow-color: white !important;
+  background-color: #3c4147;
+}
 </style>

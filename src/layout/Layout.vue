@@ -30,7 +30,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.n-layout-sider .n-layout-sider-scroll-container {
-  height: calc(100vh - 60px - 32px);
+.n-layout-header {
+  line-height: 0px;
 }
 </style>
