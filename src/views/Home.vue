@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div style="text-align: center; vertical-align: middle;">
+    <div style="text-align: center;">
         <img src="/logo-16x9-1794x1009.png"/>
     </div>
 </template>
