@@ -29,6 +29,12 @@
   </div>
 </template>
 
+<script setup>
+import { ref, reactive, inject } from "vue"
+const $axios = inject('$axios')
+
+</script>
+
 <script>
 export default {
   name: 'Header'
