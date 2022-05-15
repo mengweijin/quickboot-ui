@@ -4,6 +4,7 @@
       <el-icon :size="20" style="vertical-align: middle" v-show="isCollapse"><expand /></el-icon>
       <el-icon :size="20" style="vertical-align: middle" v-show="!isCollapse"><fold /></el-icon>
     </div>
+    
     <el-menu router mode="vertical" :collapse="isCollapse" :collapse-transition="false" unique-opened>
       <el-sub-menu index="1">
         <template #title><el-icon><document /></el-icon> <span>menu one</span></template>
@@ -31,7 +32,7 @@ const isCollapse = ref(false)
 
 <script>
 export default {
-  name: 'ElASide',
+  name: 'ASide',
   methods: {
     toggleCollapse() {
       this.isCollapse = !this.isCollapse

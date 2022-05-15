@@ -1,17 +1,15 @@
 <script setup>
 import Header from './Header.vue'
 import Footer from './Footer.vue'
-import ElASide from './ElASide.vue'
+import ASide from './ASide.vue'
 </script>
 
 <template>
   <el-container>
       <el-header> <Header/> </el-header>
         <el-container>
-          <ElASide/>
-          <el-main>
-            <!-- <Goods/> --> 
-          </el-main>
+          <ASide/>
+          <el-main> <router-view /> </el-main>
         </el-container>
       <el-footer> <Footer/> </el-footer>
     </el-container>
@@ -39,7 +37,7 @@ export default {
     height: calc(100vh - 60px - 40px);
 }
 .el-main {
-    background-color: #E9EEF3;
+    background-color: white;
     color: #333;
     padding: 0;
     /* 设置主体 main 高度（减去 header 和 footer 的高度） */

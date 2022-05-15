@@ -11,7 +11,7 @@ const routes = [
             {
                 path: '/home',
                 components: {
-                    //default: () => import ('../components/layout/LayoutGoods.vue')
+                    default: () => import ('../views/Home.vue')
                 }
             }
         ]
