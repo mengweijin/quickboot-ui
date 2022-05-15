@@ -3,7 +3,7 @@ import { Icon } from '@vicons/utils'
 import {QqCircleFilled} from '@vicons/antd'
 import {EmailFilled} from '@vicons/material'
 
-const currentYear=new Date().getFullYear()
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>
